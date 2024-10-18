@@ -33,6 +33,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.cloudinary.Cloudinary
 import com.cloudinary.android.MediaManager
 import com.cloudinary.android.callback.ErrorInfo
 import com.cloudinary.android.callback.UploadCallback
@@ -101,9 +102,11 @@ class MainActivity : ComponentActivity() {
             padding = PaddingValues(),  // Adjust this as needed
             onClick = {
                 scope.launch {
+
                     uploadMedia(
                         context = context,
                         url = url,
+                        isVideo = isVideo,
                         onProgressTracked = { bytes, totalBytes ->
                             val currentProgress = bytes.toDouble() / totalBytes
                             progress = currentProgress  // Update progress
@@ -119,6 +122,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                     )
+
                 }
             },
             progress = progress,
@@ -178,16 +182,19 @@ class MainActivity : ComponentActivity() {
     private suspend fun uploadMedia(
         context: Context,
         url: String,
+        isVideo: Boolean = false,
         onProgressTracked: (Long, Long) -> Unit
     ) {
         try {
             val file = withContext(Dispatchers.IO) {
                 downloadFile(url, context)
             }
+            Log.d("Video Test", "uploadMedia: $file")
 
             if (file != null) {
                 val requestId = MediaManager.get()
                     .upload(file.path)
+                    .option("resource_type", if (isVideo) "video" else "image")
                     .callback(createUploadCallback(onProgressTracked))
                     .dispatch()
 
@@ -199,6 +206,7 @@ class MainActivity : ComponentActivity() {
             Log.e("MainActivity", "uploadMedia Error: ${e.message}")
         }
     }
+
 
     // Helper: Create a reusable UploadCallback
     private fun createUploadCallback(onProgressTracked: (Long, Long) -> Unit) =
