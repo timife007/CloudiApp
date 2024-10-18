@@ -1,0 +1,100 @@
+[versions]
+agp = "8.7.0"
+cloudinaryAndroidVersion = "3.0.2"
+kotlin = "2.0.0"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+lifecycleRuntimeKtx = "2.8.4"
+activityCompose = "1.9.1"
+composeBom = "2024.06.00"
+retrofitAdapter = "0.9.2"
+retrofit = "2.11.0"
+okHttp = "5.0.0-alpha.12"
+chucker = "3.5.2"
+canary = "2.8.1"
+daggerHilt = "2.51"
+hiltCompiler = "2.51"
+viewModelCompose = "2.8.4"
+coil = "2.1.0"
+hiltCompose = "1.2.0"
+room = "2.6.1"
+coroutines = "1.8.1"
+lifecycle = "2.8.4"
+paging_version = "3.3.2"
+timber = "5.0.1"
+compose_ui_version = "1.6.8"
+ksp = "2.0.0-1.0.21"
+appcompat = "1.7.0"
+material = "1.12.0"
+moshi="1.15.1"
+json-serializer = "1.3.0"
+material3 = "1.3.0-beta05"
+core = "2.2.0"
+testRunner = "1.6.1"
+truth = "1.0.1"
+turbine = "0.12.1"
+mockk = "1.12.4"
+
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerHilt"}
+hilt-compiler = {group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltCompiler"}
+dagger-hilt-compiler = {group = "com.google.dagger", name = "hilt-compiler", version.ref = "daggerHilt"}
+room = {group = "androidx.room", name = "room-runtime", version.ref = "room"}
+roomKtx = {group = "androidx.room", name = "room-ktx", version.ref = "room"}
+roomCompiler = {group = "androidx.room", name = "room-compiler", version.ref = "room"}
+roomPaging = {group = "androidx.room", name = "room-paging", version.ref = "room"}
+coroutineCore = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines"}
+coroutineAndroid = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines"}
+coroutinesAdapter = {group = "com.jakewharton.retrofit", name = "retrofit2-kotlin-coroutines-adapter", version.ref = "retrofitAdapter"}
+timber = {group = "com.jakewharton.timber", name = "timber", version.ref = "timber"}
+viewModelCompose = {group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "viewModelCompose"}
+coil = {group = "io.coil-kt", name = "coil-compose", version.ref = "coil"}
+hiltCompose = {group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltCompose"}
+materialIcons = {group = "androidx.compose.material", name = "material-icons-extended", version.ref = "compose_ui_version"}
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+retrofit = {group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit"}
+paging = {group = "androidx.paging", name = "paging-runtime", version.ref = "paging_version"}
+paging-compose = {group = "androidx.paging", name = "paging-compose", version.ref = "paging_version"}
+chuckerLib = {group = "com.github.chuckerteam.chucker", name = "library", version.ref = "chucker"}
+moshi-converter = {group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit"}
+okHttp = {group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okHttp"}
+moshi = {group = "com.squareup.moshi", name = "moshi", version.ref = "moshi"}
+moshi-kotlin = {group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi"}
+json-serializer = {group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "json-serializer"}
+logging-interceptor = {group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttp"}
+coroutines-test = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines"}
+core-test = {group = "androidx.arch.core", name = "core-testing", version.ref = "core"}
+turbine = {group = "app.cash.turbine", name = "turbine", version.ref = "turbine"}
+mockk = {group = "io.mockk", name = "mockk", version.ref = "mockk"}
+truth = {group = "com.google.truth", name = "truth", version.ref = "truth"}
+runner = {group = "androidx.test", name = "runner", version.ref = "testRunner"}
+cloudinary-cloudinary-android = { module = "com.cloudinary:cloudinary-android", version.ref = "cloudinaryAndroidVersion" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp = {id = "com.google.devtools.ksp", version.ref = "ksp"}
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
