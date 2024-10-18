@@ -72,7 +72,7 @@ class MainActivity : ComponentActivity() {
                             url = "https://res.cloudinary.com/dlujwccdb/video/upload/v1728910228/Stridez/posts/test_uy4d9t.mp4",
                             isVideo = true
                         )
-                        Spacer(modifier = Modifier.height(16.dp))
+                        Spacer(modifier = Modifier.height(22.dp))
                         //Image upload
                         UploadScreen(
                             context = context,
@@ -152,10 +152,9 @@ class MainActivity : ComponentActivity() {
                 progress = { progress.toFloat() },
                 modifier = Modifier.fillMaxWidth(0.8f),
             )
-
-            Text(text = "${(progress * 100).toInt()}%")
             Spacer(modifier = Modifier.height(16.dp))
             Text(text = uploaded)
+            Spacer(modifier = Modifier.height(16.dp))
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
